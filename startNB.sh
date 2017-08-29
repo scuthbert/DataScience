@@ -1,2 +1,2 @@
-source /opt/anaconda/bin/deactivate root
+source /opt/anaconda/bin/activate root
 jupyter notebook
