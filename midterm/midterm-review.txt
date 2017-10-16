@@ -1,0 +1,62 @@
+Midterm will cover THROUGH variance: The Lecture b/f the Normal Distribution
+
+1. No "find a bug in this code" q's
+2. No writing code q's
+3. Some interpreting code q's
+
+Example Probs: 
+#4 on Notebook 11
+	X is a cont RV, where f(x) = x/2 for 0 leq x leq 2 and 0 elsewhere
+	What's the expected value? Guess: Where is most of the 'mass' of the graph? Near 2.
+	E[X] = integral of xf(x)
+	     = integral from 0 to 2 of x * x/2
+	     = x^3 / 6 from 0 to 2
+	E[X] = 4/3 <-- near 2
+
+	Var(x) = integral of (x - mean)^2 f(x)
+	    OR = E[X^2] - (E[X])^2 <-- Easier
+	
+	What's E[Y], where Y = 2x + 3. Easy peasy: 
+	E[Y] = 2(E[X]) + 3
+	     = 2(4/3) + 3
+	     = 17/3
+
+	What's Var(Y)?
+	Var(Y) = Var(2x + 3) // 3 can dissapear
+	       = Var(2x) // 2 will be squared when pulled out
+               = 2^2 Var(x)
+
+For Box-and-Whisker Plots: 
+	- Need quartiles, IQR
+	- Finding Q1 and Q3, if odd number of data points include median in both halves
+	- IQR is Q3 - Q1
+	- Median line at Q2, box from Q1 to Q3, whiskers out to 
+		data point leq (1.5*IQR + Q3) or (1.5*Q1 - IQR). 
+		Flyers all points outside of whiskers.
+	- Tada!
+
+Scewed-ness: Q1 closer to Q2 than Q3 to Q2: pos scew
+
+ALL THE DISTRIBUTIONS:
+	Poisson: Discrete					Exp: Cont
+		 Number of events in interval     		     Time intervals between events
+		 Both use lambda (events per interval)		     pdf: lambda e^(-lambda t)
+		 pmf: P(X=k) = (lambda^k e^(-lambda))/k!	     cdf: F(x) = 1 - e^(-labmda t) for x geq 0 else 0
+		 cdf: fuck that					     Memoryless: time to first arrival is the same as time from first to second arrivals
+
+Continuous Distri:
+	Exp, Uniform, Normal
+
+Disrete Distri:
+	Discrete Uniform, neg binom, gemetric, poisson, bernoulli, binomial
+
+Bernoulli: Ber(p)		Binomial: Binom(n, p)
+	Single trial 			Number of successes in n trials
+	Fixed p of success		Trials must be independent, have same p
+	One coin flip			aka trials must follow Ber(p)
+
+Geometric: Geo(p)				Neg Binom:
+	Number of trials to first success		Number of trials to kth success
+	Trials must be Ber(p)
+
+Bayes Rule: Know it.
