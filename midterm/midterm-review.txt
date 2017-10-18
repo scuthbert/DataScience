@@ -60,3 +60,5 @@ Geometric: Geo(p)				Neg Binom:
 	Trials must be Ber(p)
 
 Bayes Rule: Know it.
+
+
